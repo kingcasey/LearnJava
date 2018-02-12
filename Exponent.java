@@ -22,18 +22,14 @@ public class Exponent {
 		
 		
 		for (int x=1; x<exponent; x++){
-		
 			result = result * base;
-			
+			if (result > 100){
+				System.out.println("Too big");
+				break;
+			}
 		}
 		
-		if (result < 100){
-			
 		System.out.println(result);
-		}
-		else {
-			System.out.println("The result is too big to print.");
-		}
 	}
 
 }
