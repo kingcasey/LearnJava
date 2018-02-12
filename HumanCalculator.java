@@ -19,65 +19,35 @@ public class HumanCalculator {
 			System.exit(1);
 		}
 		
-		//converting third argument to display desired operation
+		//converting third argument to display desired operation; also complete operation
 		String operation = args[2];
+		int result = 0;
 		
 		if(operation.equals("a")){
 			operation = "add";
+			result = numone + numtwo;
 		}
 		
 		if(operation.equals("s")){
 			operation = "subtract";
+			result = numone - numtwo;
 		}
 		
 		if(operation.equals("m")){
 			operation = "multiply";
+			result = numone*numtwo;
 		}
 		
 		if(operation.equals("d")){
 			operation = "divide";
+			result = numone/numtwo;
 		}
 		
 		//printing out results of input arguments
 		System.out.println("Your first number was " + numone);
 		System.out.println("Your second number was " + numtwo);
 		System.out.println("You would like to " + operation + " these numbers");
+		System.out.println("The answer is " + result);
 		
-		//perform requested operation
-		if (operation.equals("add")){
-			System.out.println("The answer is " + add(numone,numtwo) );
-		}
-		if (operation.equals("subtract")){
-			System.out.println("The answer is " + subtract(numone,numtwo) );
-		}
-		if (operation.equals("multiply")){
-			System.out.println("The answer is " + multiply(numone,numtwo) );
-		}
-		if (operation.equals("divide")){
-			System.out.println("The answer is " + divide(numone,numtwo) );
-		}
-	
 	}
-	
-	// addition method
-	public static int add (int x, int y) {
-		int result = x + y;
-		return result;	
-	}
-	// subtraction method
-	public static int subtract (int x, int y) {
-		int result = x - y;
-		return result;	
-	}
-	//multiplication method
-	public static int multiply (int x, int y) {
-		int result = x * y;
-		return result;	
-	}
-	//division method
-	public static int divide (int x, int y) {
-		int result = x/y;
-		return result;	
-	}
-	
 }
