@@ -20,18 +20,18 @@ public class Day12 {
 		while (weekNum <= weeksWorked) {
 			System.out.print("Week " + weekNum + " - Paycheck: $" + weeklyPay + "; ");
 			
-			int savePercent = 0;
+			double savePercent = 0;
 			
 			switch (weekNum) {
-			case 2 : savePercent = 2;
+			case 2 : savePercent = .2;
 			break;
-			case 3 : savePercent = 3;
+			case 3 : savePercent = .3;
 			break;
-			case 10 : savePercent = 10;
+			case 10 : savePercent = 1;
 			break;
 			}
 			
-			int saveAmount = savePercent * weeklyPay;
+			int saveAmount = (int) (savePercent * weeklyPay);
 			int payAfterSavings = weeklyPay - saveAmount;
 			
 			System.out.print("Saved: $" + saveAmount + "; ");
