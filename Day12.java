@@ -1,5 +1,4 @@
 
-import java.math.BigDecimal;
 
 public class Day12 {
 			
@@ -17,17 +16,28 @@ public class Day12 {
 
 		
 		
-		while (weekNum <= weeksWorked) {
+		while (weekNum <= weeksWorked) { //keep counting paycheck + savings weekly starting with week 1 until all worked weeks have been calculated
 			System.out.print("Week " + weekNum + " - Paycheck: $" + weeklyPay + "; ");
 			
-			double savePercent = 0;			
+			double savePercent = 0;	
 			
-			if (weekNum % 10 == 0) {
-				savePercent = .5;
-			} else if (weekNum % 3 == 0){
-				savePercent = .3;
-			} else if (weekNum % 2 == 0){
-				savePercent = .2;
+			int leftOver = weekNum % 10;
+			
+			switch(leftOver){
+				case 0: savePercent = .5;
+				break;
+				case 3: savePercent = .3;
+				break;
+				case 2: savePercent = .2;
+				break;
+				case 4: savePercent = .2;
+				break;
+				case 6: savePercent = .3;
+				break;
+				case 8: savePercent = .2;
+				break;
+				case 9: savePercent = .3;
+				break;
 			}
 			
 			int saveAmount = (int) (savePercent * weeklyPay);

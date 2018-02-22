@@ -8,11 +8,11 @@ public class Day13 {
 			int numtwo = 0;
 			int result = 0;
 			
-			if (args.length == 2){
+			if (args.length == 2){ //if only two arguments passed, no second number
 				try {
-					numone = Integer.parseInt(args[0]);
+					numone = Integer.parseInt(args[0]); //convert string number to an int
 				}
-				catch (NumberFormatException nfe) {
+				catch (NumberFormatException nfe) { //print an error if a number could not be retrieved
 					System.out.println("The first and second argument must be an integer.");
 					System.exit(1);
 				}
@@ -42,7 +42,7 @@ public class Day13 {
 				
 				
 				
-			} else {
+			} else {//if three arguments passed with 2 numbers and an operation
 			
 			//converting first two argument to integers
 			try {
